@@ -1,0 +1,31 @@
+version: 0.1
+phases:
+  pre_build:
+    commands:
+      - composer install
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Post Build completed on `date`
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/messageUtil-1.0.jar
+

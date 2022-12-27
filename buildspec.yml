@@ -9,10 +9,11 @@ phases:
   post_build:
     commands:
       - echo Post Build completed on `date`
+      - aws cp s3://codepipeline-ap-southeast-1-282847109480/test-php/SourceArti/*  s3://marselino/*
       # - aws deploy create-application --application-name HelloWorld_App
-      - aws  deploy push 
-        --application-name php-app \
-        --description "This is my deployment" \
-        --ignore-hidden-files \
-        --s3-location s3://marselino/myphp.zip  \
-        --region ap-southeast-3  
+      # - aws  deploy push 
+      #   --application-name php-app \
+      #   --description "This is my deployment" \
+      #   --ignore-hidden-files \
+      #   --s3-location s3://marselino/myphp.zip  \
+      #   --region ap-southeast-3  

@@ -9,7 +9,7 @@ phases:
   post_build:
     commands:
       - echo Post Build completed on `date`
-      - aws s3 cp s3://codepipeline-ap-southeast-1-282847109480/test-php/*  s3://roni-marselino/source/ --recursive --exclude ".git/*"
+      - aws s3 cp s3://codepipeline-ap-southeast-1-282847109480/test-php/*  s3://roni-marselino/ --recursive 
       # - aws deploy create-application --application-name HelloWorld_App
       # - aws  deploy push 
       #   --application-name php-app \

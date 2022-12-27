@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Post Build completed on `date`
       # - aws deploy create-application --application-name HelloWorld_App
-      - aws code deploy --application-name php-app \
+      - aws code deploy push --application-name php-app \
         --s3-location s3://marselino/myphp.zip  \
         --region ap-southeast-3   \
         --description "This is my deployment"

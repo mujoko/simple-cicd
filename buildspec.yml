@@ -2,7 +2,7 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - composer install
+      - echo prebuild started on `date`
   build:
     commands:
       - echo Build started on `date`

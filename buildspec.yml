@@ -14,7 +14,7 @@ phases:
         --deployment-config-name CodeDeployDefault.AllAtOnce \
         --deployment-group-name jakarta-dg \
         --s3-location bucket=aai-test-auo,key=aai-app-23444.zip,bundleType=zip \
-        --region $AWS_DEFAULT_REGION
+        --region ap-southeast-3  
 
       # - aws deploy create-application --application-name HelloWorld_App
       # - aws  deploy push 

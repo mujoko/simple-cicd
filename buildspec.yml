@@ -10,6 +10,12 @@ phases:
     commands:
       - echo Post Build completed on `date`
       - aws s3 cp s3://codepipeline-ap-southeast-1-282847109480/test-php/*  s3://roni-marselino/ --recursive 
+      - aws deploy create-deployment --application-name php-app \
+        --deployment-config-name CodeDeployDefault.AllAtOnce \
+        --deployment-group-name jakarta-dg \
+        --s3-location bucket=aai-test-auo,key=aai-app-23444.zip,bundleType=zip \
+        --region $AWS_DEFAULT_REGION
+
       # - aws deploy create-application --application-name HelloWorld_App
       # - aws  deploy push 
       #   --application-name php-app \
